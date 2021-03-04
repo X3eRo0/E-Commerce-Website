@@ -1,0 +1,142 @@
+{% extends 'products/base.html' %}
+
+
+{% block body %}
+	  <nav>
+  <div class="ml-auto">
+  
+{% if user.is_authenticated %}
+  Hi {{ user.username }}!
+  <p><a href="{% url 'logout' %}">logout</a></p>
+{% else %}
+  <p>You are not logged in</p>
+  <a href="{% url 'login' %}">login</a>
+{% endif %}
+  
+  
+        
+    </div>
+	</nav>
+	
+<!-- Main Carousel Part -->
+<div id="MainCarousel" class="carousel slide mb-5" data-ride="carousel">
+
+	<ol class="carousel-indicators">
+    	<li data-target="#MainCarousel" data-slide-to="0" class="active"></li>
+    	<li data-target="#MainCarousel" data-slide-to="1"></li>
+    	<li data-target="#MainCarousel" data-slide-to="2"></li>
+    	<li data-target="#MainCarousel" data-slide-to="3"></li>
+    	<li data-target="#MainCarousel" data-slide-to="4"></li>
+    	<li data-target="#MainCarousel" data-slide-to="5"></li>
+    	<li data-target="#MainCarousel" data-slide-to="6"></li>
+    </ol>
+
+    <div class="carousel-inner" style="background-color: #f8f9fa;">
+	
+	 {% load staticfiles %}
+
+    <div class="carousel-item active">
+    	<a href=""><img class="d-block w-100 CarouselImage" src="{%static 'img/carousel/carousel1.jpg' %}" alt="First slide"></a>
+    </div>
+    <div class="carousel-item">
+        <a href=""><img class="d-block w-100 CarouselImage" src="{%static 'img/carousel/carousel2.jpg' %}" alt="Second slide"></a>
+    </div>
+    <div class="carousel-item">
+        <a href=""><img class="d-block w-100 CarouselImage" src="{%static 'img/carousel/carousel3.jpg' %}" alt="Third slide"></a>
+    </div>
+    <div class="carousel-item">
+        <a href=""><img class="d-block w-100 CarouselImage" src="{%static 'img/carousel/carousel4.jpg' %}" alt="Fourth slide"></a>
+    </div>
+    <div class="carousel-item">
+        <a href=""><img class="d-block w-100 CarouselImage" src="{%static 'img/carousel/carousel5.jpg' %}" alt="Fifth slide"></a>
+    </div>
+    <div class="carousel-item">
+        <a href=""><img class="d-block w-100 CarouselImage" src="{%static 'img/carousel/carousel6.jpg' %}" alt="Sixth slide"></a>
+    </div>
+    <div class="carousel-item">
+        <a href=""><img class="d-block w-100 CarouselImage" src="{%static 'img/carousel/carousel7.jpg' %}" alt="Seventh slide"></a>
+    </div>
+
+    </div>
+
+    <a class="carousel-control-prev" href="#MainCarousel" role="button" data-slide="prev">
+    	<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    	<span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#MainCarousel" role="button" data-slide="next">
+    	<span class="carousel-control-next-icon" aria-hidden="true"></span>
+    	<span class="sr-only">Next</span>
+    </a>
+
+</div>
+<!-- end of Main Carousel Part -->
+
+
+
+
+
+
+
+
+
+<!-- product display -->
+<div class="container-fluid"> 
+<div class="row" style=" background-color: #f8f9fa;">
+
+	<!-- product display loop  -->
+	{% for obj in object_list %}
+	 
+	  	  <div class="card CardDiv col-sm-2 mx-3 my-4" style="width: 14rem; text-align: center;">
+
+	       	<a href="http://127.0.0.1:8000/product/{{obj.slug}}">
+            <img src="{{obj.image1.url}}" class="mx-auto mt-2" alt="..." width="120" height="240">
+          </a>
+	        <div class="card-body">
+		       	<h5 class="card-title" style="font-size:14px"><strong>{{obj.title}}</strong></h5>
+		    	  <p class="card-text" style="font-size:14px; color: green;">{{obj.processor}}<br> {{obj.RAM}} <br> {{obj.storage}}<br>{{obj.OS}}</p>
+		    	  <p><strong>₹{{obj.price}}</strong></p>
+		      </div>
+
+        </div>
+  {% endfor %}
+
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+<!-- Card Animation -->      
+  <!-- <script>
+    $(document).ready(function()
+    {
+      $('.CardDiv').hover
+      (
+          // trigger when mouse hover
+          function()
+          {
+              $(this).animate({
+                marginTop: "-=2%",
+              },200);
+          },
+
+          // trigger when mouse out
+          function()
+          {
+              $(this).animate({ 
+                marginTop: "0%"
+              },200);
+          }
+      );
+    });
+  </script> -->
+  <!-- end of Card Animation -->
+
+
+{% endblock %}

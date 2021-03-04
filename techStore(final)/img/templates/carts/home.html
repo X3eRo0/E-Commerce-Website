@@ -1,0 +1,46 @@
+
+
+
+{% block content %}
+<h1>Cart</h1>
+
+{% if cart.products.exists %}
+<table class="table cart-table">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Product Name</th>
+      <th>Product Price</th>
+    </tr>
+  </thead>
+  <tbody class='cart-body'>
+    {% for product in cart.products.all %}
+    <tr class='cart-product'>
+      <th scope="row">{{ forloop.counter }}</th>
+      <td>{{ product.title }}</td>
+      <td>{{ product.price }}</td>
+	  <td><img src="{{ product.image}}"</td>
+    </tr>
+    {% endfor %}
+    <tr>
+      <td colspan="2"></td>
+      <td><b>Subtotal</b> $<span class='cart-subtotal'>{{ cart.subtotal }}</span></td>
+    </tr>
+    <tr>
+      <td colspan="2"></td>
+      <td><b>Total</b> $<span class='cart-total'>{{ cart.total }}</span></td>
+    </tr>
+    <tr>
+      <td colspan="2"></td>
+     
+
+  </tbody>
+</table>
+{% endif %}
+
+
+
+
+
+
+{% endblock %}

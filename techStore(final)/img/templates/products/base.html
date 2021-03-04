@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en">
+<head>
+   <!-- title name -->
+  <title>tech-Store</title>
+
+  <!-- title icon -->
+  <link rel="shortcut icon" type="image/x-icon" href="{% static 'img/logo/logo-icon2.png' %}">
+
+  <!-- required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- my CSS link -->
+  <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu+Condensed" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+
+  <!-- font awesome -->
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+  <!-- bootstrap CSS-->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+  <!-- jquery -->
+  <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"> </script> -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  <!-- javascript -->
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+
+
+
+
+
+
+
+
+<!-- NAVIGATION BAR -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+
+  <!-- logo -->
+  <a class="navbar-brand" href="/">
+    <img src="{% static 'img/logo/logo2.png' %}" width="160" height="35" alt="Tech-Store">
+  </a>
+
+  <!-- toggle button -->
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <!-- navigations -->
+  <div class="collapse navbar-collapse" id="navbarToggler">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="http://127.0.0.1:8000/search/?q=Apple">Apple</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="http://127.0.0.1:8000/search/?q=google">Google</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="http://127.0.0.1:8000/search/?q=samsung">Samsung</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="http://127.0.0.1:8000/search/?q=asus">ASUS</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="http://127.0.0.1:8000/search/?q=xiaomi">Xiaomi</a>
+      </li>   
+    </ul>
+
+    <!-- search bar -->
+    {% include 'search/search-form.html' %}
+
+    <!-- cart & login/register button -->
+    <div class="ml-auto">
+
+      <button type="submit" class="btn btn-outline-warning my-2 my-sm-0 ml-2 navButton" data-target="#"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Cart</button>
+  
+ 
+
+  </div>
+
+</nav>
+{% block body %}
+
+ 
+
+
+
+<!-- different work to de done here from different pages -->
+
+
+
+
+
+
+{% endblock %}
+<!-- features -->
+<div class="container-fluid mt-5" style="background-color: #f8f9fa;">
+  <div class="row py-3">
+
+    <div class="col-md-3 col-6">
+      <img src="{% static 'img/features/100%logo1.png' %}" width="24%" class="features-img">
+      <h6 class="features-text py-3" style="width:76%">100% Original Items</h6>
+    </div>
+
+    <div class="col-md-3 col-6">
+      <img src="{% static 'img/features/30DaysReturn.png' %} " width="20%" class="features-img"> 
+      <h6 class="features-text pt-4" style="width:80%">30 Days Return Policy</h6>
+    </div>
+
+    <div class="col-md-3 col-6">
+      <img src="{% static 'img/features/freeShipping1.png' %}" width="25%" class="features-img">
+      <h6 class="features-text pt-3" style="width:75%">Free Shipping</h6>
+    </div>
+
+    <div class="col-md-3 col-6">
+      <img src="{% static 'img/features/multiplePayment2.png' %}" width="20%" class="features-img"> 
+      <h6 class="features-text pt-2" style="width:80%">Multiple Payment Options<br>Card/COD/Net Banking</h6>
+    </div>
+
+  </div>
+</div>
+<!--end of features -->
+
+
+
+
+<!-- footer -->
+<div class="container-fluid footerDiv">
+
+  <div class="row py-5 footerRow">
+    <div class="col-4 ">
+      <h4 class="footerHeadingText">Useful Links</h4>
+      <a href="" class="footerlinksText pt-2">Privacy Policy</a> <br>
+      <a href="" class="footerlinksText">Return Policy</a>
+    </div>
+
+    <div class="col-4">
+      <h4 class="footerHeadingText">Company</h4>
+      <a href=""class="footerlinksText pt-2">About Us</a> <br>
+      <a href="" class="footerlinksText">Contact Us</a>
+    </div>
+
+    <div class="col-4">
+      <h4 class="footerHeadingText">Follow Us On</h4>
+      <a href="https://www.facebook.com/" class="footerlinksText pt-2"><i class="fa fa-facebook" aria-hidden="true"></i> Facebook</a> <br>
+      <a href="https://twitter.com/" class="footerlinksText"><i class="fa fa-twitter" aria-hidden="true"></i> Twitter</a>
+    </div>
+  </div>
+
+  <hr>
+
+  <div class="py-1">
+    <p class="copyrightText">Made with <i class="fa fa-heart-o" aria-hidden="true"></i> by Faiz Ahmed</p>
+    <p class="copyrightText"><i class="fa fa-copyright" aria-hidden="true"></i>2019 tech-Store Inc. | All Rights Reserved</p>
+  </div>
+
+</div>
+<!--end of footer -->
+
+
+</body>
+</html>

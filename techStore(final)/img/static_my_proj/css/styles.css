@@ -1,0 +1,163 @@
+/*FOR ALL*/
+
+html 
+{
+  scroll-behavior: smooth;		/*for smooth scrolling effect in SCROLLSPY*/
+}
+
+body
+{
+	font-family: 'Quicksand', sans-serif !important;		/*Google Font for all Text*/
+}
+
+/*end of FOR ALL*/
+
+
+
+
+/*NAVIGATION*/
+
+li.dropdown:hover > .dropdown-menu 
+{
+    display: block;		/*on hovering it will show the dropdown list*/
+}
+
+/*end of NAVIGATION*/
+
+
+
+
+/*PRODUCTS*/
+.card:hover 	/*on hovering it will display shadow*/
+{
+    -webkit-box-shadow: -1px 9px 40px -12px rgba(0,0,0,0.75);	/*chrome*/
+    -moz-box-shadow: -1px 9px 40px -12px rgba(0,0,0,0.75);		/*mozilla*/
+    box-shadow: -1px 9px 40px -12px rgba(0, 0, 0, 0.75);		/*normal*/
+}
+
+.CardAnchorTag	/*FOR ALL products CARD*/
+{
+	/*outline: none;
+	color: black*/;	/*color of text change from BLUE-LINK to BLACK*/
+}
+
+.CardAnchorTag:hover /*FOR ALL products CARD*/
+{
+	/*text-decoration: none;	on hovering text-decoration by default is UNDERLINED
+	color: black;*/	/*on hovering color of text change from BLUE-LINK to BLACK*/
+}
+
+/*for image inside card to zoom*/
+/*.NewArrivalsImageDiv
+{
+	overflow: hidden;
+}
+.NewArrivalsImageDiv img
+{
+	transition: all 1.5s ease;
+}
+.NewArrivalsImageDiv:hover img
+{
+	transform: scale(1.5);
+}*/
+
+/*end of PRODUCTS*/
+
+
+
+
+/*FEATURES OF THE WEBSITE*/
+
+.features-img
+{
+	float: left;	/*features images will be on the left-side*/
+}
+
+.features-text
+{
+	padding-left: 5px;
+	font-weight: bold;
+	float: right;	/*features text will be on the right-side*/
+}
+
+/*end FEATURES OF THE WEBSITE*/
+
+
+
+
+/*FOOTER*/
+
+.footerDiv
+{
+	background-color: black;
+	color: white;	/*text color inside footerDiv will be WHITE*/
+}
+
+.footerRow
+{
+	text-align: center;		/*all the text under this div will be centered*/
+}
+
+.footerHeadingText
+{
+	text-decoration: underline;	/*headings will be underlined | Useful Links | Company | Follow Us On | */
+	font-size: 14px;
+}
+
+.footerlinksText	/*text under footerHeading*/
+{
+	font-size: 12px;
+	color: white;	/*change color from BLUE-LINK to WHITE*/
+	outline: none;
+}
+
+.footerlinksText:hover
+{
+	color: grey;	/*on hovering the footerlinksText it will change its color from BLUE-LINK to GREY*/
+	text-decoration: none;	/*on hovering text-decoration by default is UNDERLINED*/
+}
+
+.footerDiv hr 	/*hr=horizontal line*/
+{
+	background-color: #ccc;		/*horizontal color will be light grey*/
+}
+
+.fa-heart-o	 /*font-awesome heart*/
+{
+	color: red;
+	font-size: 14px;
+}
+
+.copyrightText	/*last two lines of the page*/
+{
+	text-align: center;
+	font-size: 12px;
+	line-height: 1;
+}
+
+/*end of FOOTER*/
+
+
+
+/*details.html*/
+
+.ProductTitle
+{
+	margin-top: 20px;
+	font-weight: bold;
+	margin-left: ;
+	font-size: 25px;
+	color: #555;
+}
+
+.ProductDescription
+{
+	font-size: 14px;
+	line-height: 1;
+}
+
+.ProductPrice
+{
+	font-size: 18px;
+	color: #E38A17;
+}

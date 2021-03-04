@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% load static %}
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Sign up</title>
+    <link rel="icon" href="{% static "logo/icon.jpg" %}" type="image/icon" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" />
+    <link rel="stylesheet" href="{% static "css/signup.css" %}" />
+
+    </style>
+</head>
+
+<body>
+    <section id="nav-bar" style="
+    background: rgba(0,0,0,0.3);
+">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-transprent">
+            <img src="{% static "logo/new.png" %}" style="
+                height: 45px;
+                margin-top: -2px;
+                margin-bottom: 5px;" />
+            <h3 class="home" style="color:white;margin-bottom:.6rem;">Registration Page</h3>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="true" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto" style="font-size: 20px">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'login' %}">LOG IN</a>
+                    </li>
+                   
+                </ul>
+            </div>
+        </nav>
+    </section>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-9 col-md-6 col-lg-5 mx-auto">
+        
+                <div class="card card-signin my-5">
+                    <div class="card-body">
+                        
+                        <h4 class="card-title mt-3 text-center">Create Account</h4>
+                       <form action="{% url 'register' %}" method ="POST">
+			{% csrf_token %}
+               
+                  <div class="form-group">
+                  <label for="first_name">First Name</label>
+                  <input type="text" name="first_name" class="form-control" required>
+                </div>
+                <div class="form-group">
+                  <label for="last_name">Last Name</label>
+                  <input type="text" name="last_name" class="form-control" required>
+                </div>
+                <div class="form-group">
+                  <label for="username">Username</label>
+                  <input type="text" name="username" class="form-control" required>
+                </div>
+                <div class="form-group">
+                  <label for="email">Email</label>
+                  <input type="email" name="email" class="form-control" required>
+                </div>
+                <div class="form-group">
+                  <label for="password">Password</label>
+                  <input type="password" name="password" class="form-control" required>
+                </div>
+                <div class="form-group">
+                  <label for="password2">Confirm Password</label>
+                  <input type="password2" name="password2" class="form-control" required>
+                </div>
+                <input type="submit" value="Register" class="btn btn-secondary btn-block">
+              </form>                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+
+</html>

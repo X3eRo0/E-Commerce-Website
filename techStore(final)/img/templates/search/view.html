@@ -1,0 +1,25 @@
+{% extends 'products/base.html' %}
+
+
+{% block body %}
+
+
+<div class='row'>
+{% if query %}
+<div class='col-12 mb-3'>
+Results for {{query}}</b>
+</div>
+
+{% else %}
+<div class='col-12 cl-md-8 mx-auto'>
+{% include 'search/search-form.html' %}
+</div>
+
+{% endif %}
+
+
+
+
+Searched for {{request.GET.q}}
+
+{% endblock %}

@@ -1,0 +1,3 @@
+USERNAME	: 	techstore
+EMAIL		: 	techstore@gmail.com
+PASSWORD	: 	12345
